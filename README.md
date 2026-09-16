@@ -31,21 +31,36 @@ A disponibilidade de novos downloads depende do portal de origem.
 
 O código usa o catálogo `voebem`. Se escolher outro nome, ajuste as referências nos notebooks, SQL e configuração do Genie. As cargas usam sobrescrita ou `CREATE OR REPLACE`: execute no ambiente destinado a este projeto.
 
-## Sequência de estudos e execução
+## Sequência de estudos e execução (em desenvolvimento)
 
-### ✅Concluído:
+#### ✅Concluído:
 
-1. `notebooks/bronze_vra.py`
-2. `notebooks/bronze_referencias.py`
-3. `notebooks/silver_espelho.py`
+1. [x] `notebooks/bronze_vra.py`
+2. [x] `notebooks/bronze_referencias.py`
+3. [x] `notebooks/silver_espelho.py`
 
-### 🏗️ Em construção:
+#### 🏗️ Em construção:
 
-4. Configure um pipeline de qualidade com os três arquivos de pipelines/qualidade/, catálogo voebem e schema silver, e execute-o no Databricks. Para usar sql/metricas_qualidade.sql, configure também a publicação do event log do pipeline na tabela voebem.silver.eventos_qualidade.
-5. Execute sql/gold/01_dim_aeroporto.sql, 02_fato_voos.sql e 03_obt_voos.sql, nessa ordem.
-6. Execute notebooks/09_governanca_gold.py.
-7. Explore as consultas em sql/gabarito/ e as perguntas em docs/perguntas-de-negocio.md.
-8. Opcional: configure um espaço Genie com voebem.gold.obt_voos, usando os exemplos e instruções de genie/. O script python scripts/montar_genie_space.py regenera o JSON; ele não cria o espaço no serviço.
+4. [ ] Configure um pipeline de qualidade com os três arquivos de pipelines/qualidade/, catálogo voebem e schema silver, e execute-o no Databricks. Para usar sql/metricas_qualidade.sql, configure também a publicação do event log do pipeline na tabela voebem.silver.eventos_qualidade.
+5. [ ] Execute sql/gold/01_dim_aeroporto.sql, 02_fato_voos.sql e 03_obt_voos.sql, nessa ordem.
+6. [ ] Execute notebooks/09_governanca_gold.py.
+7. [ ] Explore as consultas em sql/gabarito/ e as perguntas em docs/perguntas-de-negocio.md.
+8. [ ] Opcional: configure um espaço Genie com voebem.gold.obt_voos, usando os exemplos e instruções de genie/. O script python scripts/montar_genie_space.py regenera o JSON; ele não cria o espaço no serviço.
+
+## Utilitários opcionais
+
+Os scripts que acessam o Databricks exigem a CLI instalada e autenticada no seu próprio workspace. O perfil padrão é `alura-imersao`, substituível pela variável `DATABRICKS_CONFIG_PROFILE`.
+
+Para consultar seu espaço Genie no PowerShell:
+
+```python
+$env:DATABRICKS_CONFIG_PROFILE = "alura-imersao"
+$env:GENIE_SPACE_ID = "ID_DO_SEU_ESPACO"
+python scripts/perguntar_genie.py "Quais aeroportos concentram os maiores atrasos?"
+```
+
+Os scripts `.sh` exigem Bash, como Git Bash ou WSL. Para `rodar_notebook.sh`, defina também `DATABRICKS_WORKSPACE_PATH` com a pasta dos notebooks no workspace. O script `rodar_pipeline.sh` recebe o ID do seu pipeline como primeiro argumento. As variáveis devem ser definidas no terminal em que o script será executado.
+
 
 ## Créditos
 
