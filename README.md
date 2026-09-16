@@ -29,9 +29,20 @@ A disponibilidade de novos downloads depende do portal de origem.
 O código usa o catálogo `voebem`. Se escolher outro nome, ajuste as referências nos notebooks, SQL e configuração do Genie. As cargas usam sobrescrita ou `CREATE OR REPLACE`: execute no ambiente destinado a este projeto.
 
 ## Sequência de estudos e execução
+
+### ✅Concluído:
+
 1. `notebooks/bronze_vra.py`
 2. `notebooks/bronze_referencias.py`
 3. `notebooks/silver_espelho.py`
+
+### 🏗️ Em construção:
+
+4. Configure um pipeline de qualidade com os três arquivos de pipelines/qualidade/, catálogo voebem e schema silver, e execute-o no Databricks. Para usar sql/metricas_qualidade.sql, configure também a publicação do event log do pipeline na tabela voebem.silver.eventos_qualidade.
+5. Execute sql/gold/01_dim_aeroporto.sql, 02_fato_voos.sql e 03_obt_voos.sql, nessa ordem.
+6. Execute notebooks/09_governanca_gold.py.
+7. Explore as consultas em sql/gabarito/ e as perguntas em docs/perguntas-de-negocio.md.
+8. Opcional: configure um espaço Genie com voebem.gold.obt_voos, usando os exemplos e instruções de genie/. O script python scripts/montar_genie_space.py regenera o JSON; ele não cria o espaço no serviço.
 
 ## Créditos
 
