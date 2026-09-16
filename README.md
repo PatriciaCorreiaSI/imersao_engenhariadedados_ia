@@ -26,7 +26,7 @@ Eles utilizam a biblioteca padrão. Os notebooks dependem do ambiente Spark/Data
 - Envie o conteúdo de `dados/vra/` para `/Volumes/voebem/bronze/arquivos/vra/` e o conteúdo de `dados/referencias`/ para `/Volumes/voebem/bronze/arquivos/referencias/`.
 - Importe os arquivos de `notebooks`/ como notebooks Databricks.
 
-O código usa o catálogo `voebe`m. Se escolher outro nome, ajuste as referências nos notebooks, SQL e configuração do Genie. As cargas usam sobrescrita ou `CREATE OR REPLACE`: execute no ambiente destinado a este projeto.
+O código usa o catálogo `voebem`. Se escolher outro nome, ajuste as referências nos notebooks, SQL e configuração do Genie. As cargas usam sobrescrita ou `CREATE OR REPLACE`: execute no ambiente destinado a este projeto.
 
 ## Sequência de estudos e execução
 1. `notebooks/bronze_vra.py`
