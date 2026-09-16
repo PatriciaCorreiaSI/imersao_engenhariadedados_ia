@@ -17,9 +17,9 @@ A instalação local é necessária somente se você optar pelos scripts de term
 Eles utilizam a biblioteca padrão. Os notebooks dependem do ambiente Spark/Databricks e não devem ser executados como scripts Python locais.
 
 - Baixe ou clone este repositório e abra um terminal na pasta do projeto.
-- Os CSVs já estão incluídos em dados/, portanto não é necessário baixá-los novamente.
-Para recuperar arquivos ausentes, execute python scripts/baixar_anac.py.
-O script usa a janela agosto/2025 a julho/2026, reaproveita arquivos existentes e atualiza docs/fontes.md com o registro do download.
+- Os CSVs já estão incluídos em `dados/`, portanto não é necessário baixá-los novamente.
+Para recuperar arquivos ausentes, execute `python scripts/baixar_anac.py`.
+O script usa a janela agosto/2025 a julho/2026, reaproveita arquivos existentes e atualiza `docs/fontes.md` com o registro do download.
 A disponibilidade de novos downloads depende do portal de origem.
 - Crie uma conta no [Databricks](https://login.databricks.com)
 - Abra seu ambiente de estudos no Databricks, execute `sql/00_preparar_ambiente.sql`. É necessário ter permissão para criar catálogo, schemas e volume.
