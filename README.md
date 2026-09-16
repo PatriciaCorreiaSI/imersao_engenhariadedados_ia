@@ -9,6 +9,9 @@ O percurso é pelo navegador, com os dados incluídos e sem instalar Python ou G
 ## Estrutura
 - `dados/`: 15 CSVs da ANAC incluídos no material original: 12 meses de VRA (agosto/2025 a julho/2026) e três cadastros de referência.
 - `notebooks/`: ingestão Bronze, transformação Silver e governança Gold. Os arquivos .py estão no formato de notebooks Databricks.
+- `sql`: arquivo de preparação do ambiente no Databricks.
+- `scripts/`: download dos dados e utilitários opcionais de execução e Genie.
+- `docs/`: fontes, 
 
 
 ## Preparação
