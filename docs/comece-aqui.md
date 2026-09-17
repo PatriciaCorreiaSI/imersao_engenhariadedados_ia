@@ -74,9 +74,9 @@ Abra e execute, um de cada vez, nesta ordem:
 
 | Ordem | Notebook | O que faz |
 |---|---|---|
-| 1 | `bronze_vra` | Lê os CSVs de voos e cria a tabela Bronze |
-| 2 | `bronze_referencias` | Carrega os cadastros e códigos de referência |
-| 3 | `silver_espelho` | Aplica tipos, cálculos e documentação |
+| 1 | `01_bronze_vra` | Lê os CSVs de voos e cria a tabela Bronze |
+| 2 | `02_bronze_referencias` | Carrega os cadastros e códigos de referência |
+| 3 | `03_silver_espelho` | Aplica tipos, cálculos e documentação |
 
 Selecione **Serverless** no notebook e use **Run all** para executar todas as células. Aguarde terminar antes de abrir a próxima etapa. Se houver erro, pare na primeira célula que falhou e consulte a seção de ajuda abaixo.
 
