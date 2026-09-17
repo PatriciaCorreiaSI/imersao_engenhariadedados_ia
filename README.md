@@ -49,6 +49,27 @@ O código usa o catálogo `voebem`. Se escolher outro nome, ajuste as referênci
 
 Algumas numerações originais foram preservadas; os números ausentes não representam arquivos faltando neste pacote.
 
+## Conclusões do projeto (até aqui):
+
+Como *objetivo de negócio*, existem **perguntas que precisamos responder** dentro engenharia de dados para: `preparar os dados → para serem manipulados por agentes de IA`.
+Neste projeto, cada pergunta foi respondida da seguinte maneira:
+
+
+### **1. Como criamos condições para que um agente consiga entender como ele deve buscar o dado aqui dentro?**
+* temos tags;
+* temos contexto;
+* temos comentários.
+
+### **2. Como criamos condições para garantir que o dado que nasceu na origem tenha qualidade e eu garanta que ele é verdadeiro?**
+* regras de qualidade;
+* validações;
+* mecanismos para proteger isso.
+
+### **3. Como criamos condições para que os usuários consigam entender os dados?**
+* Fizemos ajustes semânticos;
+* Fizemos a preparação destes dados.
+
+
 ## Utilitários opcionais
 
 Os scripts que acessam o Databricks exigem a CLI instalada e autenticada no seu próprio workspace. O perfil padrão é `alura-imersao`, substituível pela variável `DATABRICKS_CONFIG_PROFILE`.
